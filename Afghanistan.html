@@ -34,9 +34,6 @@
             padding: 20px;
             font-size: 18px;
             line-height: 1.5;
-            display: grid; /* Use grid layout */
-            grid-template-columns: repeat(10, 1fr); /* 10 columns */
-            grid-template-rows: repeat(5, 1fr); /* 5 rows */
         }
 
         /* Styling for the "No" text */
@@ -45,6 +42,15 @@
             color: white;
             padding: 5px;
             border-radius: 4px;
+            display: inline-block;
+        }
+
+        /* Style for the grid layout */
+        #gridLayout {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            margin-top: 10px; /* Add margin above the grid */
         }
 
         /* Media query for mobile screens */
@@ -73,10 +79,43 @@
     <div id="homeText">
         <h1>Afghanistan</h1>
         <p id="noText">No</p> <!-- "No" with red background -->
-        <!-- Grid layout: Add content here for each grid cell -->
-        <!-- Example: You can add 10 columns and 5 rows of content as desired -->
-        <div>Grid cell content</div>
-        <!-- Add additional grid cells as needed -->
+
+        <!-- Grid layout: 3 rows, 10 columns -->
+        <div id="gridLayout">
+            <!-- Add content here for each grid cell -->
+            <div>Cell 1</div>
+            <div>Cell 2</div>
+            <div>Cell 3</div>
+            <div>Cell 4</div>
+            <div>Cell 5</div>
+            <div>Cell 6</div>
+            <div>Cell 7</div>
+            <div>Cell 8</div>
+            <div>Cell 9</div>
+            <div>Cell 10</div>
+            <!-- Row 2 -->
+            <div>Cell 11</div>
+            <div>Cell 12</div>
+            <div>Cell 13</div>
+            <div>Cell 14</div>
+            <div>Cell 15</div>
+            <div>Cell 16</div>
+            <div>Cell 17</div>
+            <div>Cell 18</div>
+            <div>Cell 19</div>
+            <div>Cell 20</div>
+            <!-- Row 3 -->
+            <div>Cell 21</div>
+            <div>Cell 22</div>
+            <div>Cell 23</div>
+            <div>Cell 24</div>
+            <div>Cell 25</div>
+            <div>Cell 26</div>
+            <div>Cell 27</div>
+            <div>Cell 28</div>
+            <div>Cell 29</div>
+            <div>Cell 30</div>
+        </div>
     </div>
 
     <script>
