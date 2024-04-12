@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Is It Safe For Jews?</title>
+    <style>
+        /* Style for the sidebar */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initial position outside the screen */
+            width: 250px;
+            height: 100%;
+            background-color: grey;
+            transition: left 0.5s; /* Smooth slide animation */
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
+        /* Style for the open/close button */
+        #toggleButton {
+            position: absolute;
+            top: 10px;
+            right: -25px; /* Position the button outside the sidebar */
+            background-color: lightgrey;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Style for the homepage text */
+        #homeText {
+            margin-left: 20px;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Media query for mobile screens */
+        @media screen and (max-width: 600px) {
+            /* Reduce the width of the sidebar */
+            #sidebar {
+                width: 200px;
+            }
+
+            /* Adjust the position of the toggle button */
+            #toggleButton {
+                right: -20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <button id="toggleButton">&gt;</button> <!-- Move the button inside the sidebar -->
+        <h2>Countries:</h2>
+        <p>Afghanistan</p>
+    </div>
+
+    <!-- Homepage text -->
+    <div id="homeText">
+        <h1>Afghanistan</h1>
+        <p>No</p>
+    </div>
+
+    <script>
+        // Get references to the sidebar and the button
+        const sidebar = document.getElementById('sidebar');
+        const toggleButton = document.getElementById('toggleButton');
+
+        // Function to toggle the sidebar
+        function toggleSidebar() {
+            if (sidebar.style.left === '-250px' || sidebar.style.left === '') {
+                // If the sidebar is closed, open it
+                sidebar.style.left = '0';
+                toggleButton.innerHTML = '&lt;'; // Change button symbol to "<"
+                toggleButton.style.right = '10px'; // Move the button inside the sidebar
+            } else {
+                // If the sidebar is open, close it
+                sidebar.style.left = '-250px';
+                toggleButton.innerHTML = '&gt;'; // Change button symbol to ">"
+                toggleButton.style.right = '-25px'; // Move the button outside the sidebar
+            }
+        }
+
+        // Add click event listener to the button
+        toggleButton.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+</html>
