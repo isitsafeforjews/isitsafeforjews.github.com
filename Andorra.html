@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Is It Safe For Jews?</title>
+    <style>
+        /* Style for the sidebar */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initial position outside the screen */
+            width: 250px;
+            height: 100%;
+            background-color: grey;
+            transition: left 0.5s; /* Smooth slide animation */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Style for the open/close button */
+        #toggleButton {
+            position: absolute;
+            top: 10px;
+            right: -25px; /* Position the button outside the sidebar */
+            background-color: lightgrey;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Style for the homepage text */
+        #homeText {
+            margin-left: 20px;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Styling for the "No" text */
+        #dependsText {
+            background-color: green;
+            color: white;
+            padding: 5px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        /* Style for the grid layout */
+        #gridLayout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            margin-top: 10px; /* Add margin above the grid */
+            border: 1px solid black; /* Border around the grid */
+        }
+
+        /* Styling for each grid cell */
+        #gridLayout div {
+            border: 1px solid black; /* Border around each cell */
+            padding: 5px;
+        }
+
+        /* Media query for mobile screens */
+        @media screen and (max-width: 600px) {
+            /* Reduce the width of the sidebar */
+            #sidebar {
+                width: 200px;
+            }
+
+            /* Adjust the position of the toggle button */
+            #toggleButton {
+                right: -20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <button id="toggleButton">&gt;</button> <!-- Move the button inside the sidebar -->
+        <h2>Countries:</h2>
+        <p><a href="Afghanistan.html">Afghanistan</a></p>
+        <p><a href="Albania.html">Albania</a></p><!-- Link to Afghanistan.html -->
+        <p><a href="Algeria.html">Algeria</a></p>
+        <p><a href="Andorra.html">Andorra</a></p>
+    </div>
+
+    <!-- Homepage text -->
+    <div id="homeText">
+        <!-- Image above Afghanistan text -->
+        <img src="images/Flag_of_Andorra.svg.png" alt="Flag of the Taliban" style="width: 200px; height: auto;">
+        <h1>Albania</h1>
+        <p id="yesText">Yes</p> <!-- "No" with red background -->
+
+        <!-- Grid layout: 5 rows, 3 columns -->
+        <div id="gridLayout">
+            <!-- Add content here for each grid cell -->
+            <div>Safety</div>
+            <div>In General: A+</div>
+            <div>For Jews: A+</div>
+            <!-- Row 2 -->
+            <div>Economy</div>
+            <div>Job Opportunities for Jews: A</div>
+            <div>Income for Jews: A+</div>
+            <!-- Row 3 -->
+            <div>Freedom</div>
+            <div>In general: A+</div>
+            <div>For Jews: A+</div>
+            <!-- Row 4 -->
+            <div>General Liveability</div>
+            <div>In General: A+</div>
+            <div>For Jews: A+</div>
+            <!-- Row 5 -->
+            <div>Total rating:</div>
+            <div>In General: A+</div>
+            <div>For Jews: A+</div>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the sidebar and the button
+        const sidebar = document.getElementById('sidebar');
+        const toggleButton = document.getElementById('toggleButton');
+
+        // Function to toggle the sidebar
+        function toggleSidebar() {
+            if (sidebar.style.left === '-250px' || sidebar.style.left === '') {
+                // If the sidebar is closed, open it
+                sidebar.style.left = '0';
+                toggleButton.innerHTML = '&lt;'; // Change button symbol to "<"
+                toggleButton.style.right = '10px'; // Move the button inside the sidebar
+            } else {
+                // If the sidebar is open, close it
+                sidebar.style.left = '-250px';
+                toggleButton.innerHTML = '&gt;'; // Change button symbol to ">"
+                toggleButton.style.right = '-25px'; // Move the button outside the sidebar
+            }
+        }
+
+        // Add click event listener to the button
+        toggleButton.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+</html>
