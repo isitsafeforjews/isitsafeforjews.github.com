@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Is it safe for Jews?</title>
+    <title>Is It Safe For Jews?</title>
     <style>
         /* Style for the sidebar */
         #sidebar {
@@ -27,6 +27,27 @@
             cursor: pointer;
             outline: none;
         }
+
+        /* Style for the homepage text */
+        #homeText {
+            margin-left: 20px;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Media query for mobile screens */
+        @media screen and (max-width: 600px) {
+            /* Reduce the width of the sidebar */
+            #sidebar {
+                width: 200px;
+            }
+
+            /* Adjust the position of the toggle button */
+            #toggleButton {
+                right: -20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -34,7 +55,13 @@
     <div id="sidebar">
         <button id="toggleButton">&gt;</button> <!-- Move the button inside the sidebar -->
         <h2>Countries:</h2>
-        <p>Adding soon..</p>
+        <p>Adding soon...</p>
+    </div>
+
+    <!-- Homepage text -->
+    <div id="homeText">
+        <h1>Welcome to "Is It Safe For Jews"!</h1>
+        <p>This website was created to show the safety of countries based on the discrimination against Jewish people.</p>
     </div>
 
     <script>
@@ -44,7 +71,7 @@
 
         // Function to toggle the sidebar
         function toggleSidebar() {
-            if (sidebar.style.left === '-250px') {
+            if (sidebar.style.left === '-250px' || sidebar.style.left === '') {
                 // If the sidebar is closed, open it
                 sidebar.style.left = '0';
                 toggleButton.innerHTML = '&lt;'; // Change button symbol to "<"
