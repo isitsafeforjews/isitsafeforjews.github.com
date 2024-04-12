@@ -34,6 +34,17 @@
             padding: 20px;
             font-size: 18px;
             line-height: 1.5;
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(10, 1fr); /* 10 columns */
+            grid-template-rows: repeat(5, 1fr); /* 5 rows */
+        }
+
+        /* Styling for the "No" text */
+        #noText {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 4px;
         }
 
         /* Media query for mobile screens */
@@ -55,13 +66,17 @@
     <div id="sidebar">
         <button id="toggleButton">&gt;</button> <!-- Move the button inside the sidebar -->
         <h2>Countries:</h2>
-        <p>Afghanistan</p>
+        <p><a href="Afghanistan.html">Afghanistan</a></p> <!-- Link to Afghanistan.html -->
     </div>
 
     <!-- Homepage text -->
     <div id="homeText">
         <h1>Afghanistan</h1>
-        <p>No</p>
+        <p id="noText">No</p> <!-- "No" with red background -->
+        <!-- Grid layout: Add content here for each grid cell -->
+        <!-- Example: You can add 10 columns and 5 rows of content as desired -->
+        <div>Grid cell content</div>
+        <!-- Add additional grid cells as needed -->
     </div>
 
     <script>
